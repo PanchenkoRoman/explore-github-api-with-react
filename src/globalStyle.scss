@@ -1,0 +1,7 @@
+@import '../node_modules/react-md/src/scss/react-md';
+
+@include react-md-everything;
+
+html{
+  background-color: white;
+}
