@@ -1,3 +1,4 @@
 export const GET_USER = 'GET_USER';
 export const SHOW_REPOS = 'SHOW_REPOS';
 export const RETURN_INITIAL_STATE = 'RETURN_INITIAL_STATE';
+export const SHOW_BRANCHES = 'SHOW_BRANCHES';

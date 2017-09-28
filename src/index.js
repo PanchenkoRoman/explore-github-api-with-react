@@ -12,12 +12,9 @@ const createStoreWithMiddleware = applyMiddleware(
     promise
 )(createStore);
 
-{/*<Provider store={createStoreWithMiddleware(reducers)}>*/}
-    {/*<App />*/}
-{/*</Provider>*/}
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-        <App/>
+        <App />
     </Provider>, document.querySelector('#root'));
 registerServiceWorker();
