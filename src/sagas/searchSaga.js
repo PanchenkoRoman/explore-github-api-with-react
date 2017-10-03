@@ -7,7 +7,7 @@ import * as types from '../constants/actionTypes';
 // for success or failure operation.
 export default function* searchSaga({ payload }) {
     try {
-        console.log(payload);
+        console.log(payload.then((value) => console.log(value)));
         const user = yield call(fetchData, payload);
         const branches = yield call(showBranches, payload);
         yield [
