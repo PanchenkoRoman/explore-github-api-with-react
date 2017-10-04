@@ -10,7 +10,6 @@ const store = configureStore();
 
 
 
-
 ReactDOM.render(
     <Provider store={store}>
         <App />

@@ -4,7 +4,8 @@ const INITIAL_STATE = [];
 export default function (state = INITIAL_STATE, action) {
     switch(action.type){
         case GET_USER:
-            return [ action.payload.data, ...state ];
+            console.log(action.user);
+            return [ action.user, ...state ];
         case SHOW_REPOS:
             return [ ...state, action.payload.data ];
         case SHOW_BRANCHES:

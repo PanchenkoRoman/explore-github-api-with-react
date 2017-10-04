@@ -3,12 +3,12 @@ import { GET_USER, SHOW_REPOS, RETURN_INITIAL_STATE, SHOW_BRANCHES } from '../co
 
 const ROOT_URL = 'https://api.github.com/users';
 
-export function fetchData(login) {
-    const request = axios.get(`${ROOT_URL}/${login}`);
-
+export function fetchData(payload) {
+//    const request = axios.get(`${ROOT_URL}/${login}`)
+console.log(payload);
     return{
         type: GET_USER,
-        payload: request
+        payload
     }
 }
 
