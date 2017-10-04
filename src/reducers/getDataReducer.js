@@ -7,7 +7,7 @@ export default function (state = INITIAL_STATE, action) {
             console.log(action.user);
             return [ action.user, ...state ];
         case SHOW_REPOS:
-            return [ ...state, action.payload.data ];
+            return [ ...state, action.repos ];
         case SHOW_BRANCHES:
             return [ ...state, action.payload.data ];
         case RETURN_INITIAL_STATE:

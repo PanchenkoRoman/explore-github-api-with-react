@@ -1,11 +1,7 @@
 import axios from 'axios';
 import { GET_USER, SHOW_REPOS, RETURN_INITIAL_STATE, SHOW_BRANCHES } from '../constants/actionTypes';
 
-const ROOT_URL = 'https://api.github.com/users';
-
 export function fetchData(payload) {
-//    const request = axios.get(`${ROOT_URL}/${login}`)
-console.log(payload);
     return{
         type: GET_USER,
         payload
@@ -13,11 +9,9 @@ console.log(payload);
 }
 
 export function selectUser(login) {
-    const request = axios.get(`${ROOT_URL}/${login}/repos`);
-
     return {
         type: SHOW_REPOS,
-        payload: request
+        login
     }
 }
 
