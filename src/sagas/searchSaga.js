@@ -8,9 +8,7 @@ export function* searchSaga({payload}) {
     try {
         //console.log(payload);
         const user = yield call(serchData, payload);
-        if(user.login !== undefined){
-            yield put({ type: types.GET_USER, user })
-        }
+            yield put({ type: 'GET_USER_NEW', user })
     } catch (error) {
         yield put({ type: 'SEARCH_MEDIA_ERROR', error });
     }
