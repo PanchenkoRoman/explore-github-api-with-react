@@ -3,23 +3,26 @@ import axios from 'axios';
 const ROOT_URL = 'https://api.github.com/users';
 
 export const serchData = (action) => {
-    if (action !== undefined) {
-        return axios.get(`${ROOT_URL}/${action}`)
-            .then(function (response) {
-                return response.data;
-            })
-    }
+    return axios.get(`${ROOT_URL}/${action}`)
+        .then(function (response) {
+            return response.data;
+        })
 };
 
 export const getRepos = (action) => {
-    //console.log(action);
-    if (action !== undefined) {
-        const request = axios.get(`${ROOT_URL}/${action}/repos`)
-            .then(function (response) {
-                return response.data;
-            });
-        return request;
-    }
+    return axios.get(`${ROOT_URL}/${action}/repos`)
+        .then(function (response) {
+            return response.data;
+        });
+};
+
+export const getBranches = (action) => {
+    let num = action.indexOf('{');
+    let url = action.substring(0, num);
+    return axios.get(url)
+        .then(function (response) {
+            return response.data;
+        });
 };
 
 

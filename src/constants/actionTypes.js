@@ -2,3 +2,7 @@ export const GET_USER = 'GET_USER';
 export const SHOW_REPOS = 'SHOW_REPOS';
 export const RETURN_INITIAL_STATE = 'RETURN_INITIAL_STATE';
 export const SHOW_BRANCHES = 'SHOW_BRANCHES';
+export const GET_USER_NEW = 'GET_USER_NEW';
+export const SEARCH_MEDIA_ERROR = 'SEARCH_MEDIA_ERROR';
+export const SHOW_REPOS_NEW = 'SHOW_REPOS_NEW';
+export const GET_BRANCHES_NEW = 'GET_BRANCHES_NEW';

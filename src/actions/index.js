@@ -1,33 +1,28 @@
-import axios from 'axios';
-import { GET_USER, SHOW_REPOS, RETURN_INITIAL_STATE, SHOW_BRANCHES } from '../constants/actionTypes';
+import * as types from '../constants/actionTypes';
 
 export function fetchData(payload) {
     return{
-        type: GET_USER,
+        type: types.GET_USER,
         payload
     }
 }
 
 export function selectUser(login) {
     return {
-        type: SHOW_REPOS,
+        type: types.SHOW_REPOS,
         login
     }
 }
 
 export function showBranches(branchesUrl) {
-    let num = branchesUrl.indexOf('{');
-    let url = branchesUrl.substring(0, num);
-    const request = axios.get(url);
-
     return{
-        type: SHOW_BRANCHES,
-        payload: request
+        type: types.SHOW_BRANCHES,
+        branchesUrl
     }
 }
 
 export function initialState() {
     return{
-        type: RETURN_INITIAL_STATE
+        type: types.RETURN_INITIAL_STATE
     }
 }
