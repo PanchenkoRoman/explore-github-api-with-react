@@ -9,7 +9,7 @@ import style from './globalStyle.scss';
 const store = configureStore();
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App className = {style.main} />
-    </Provider>, document.querySelector('#root'));
+  <Provider store={store}>
+    <App className={style.main} />
+  </Provider>, document.querySelector('#root'));
 registerServiceWorker();
